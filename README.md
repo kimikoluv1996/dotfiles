@@ -1,4 +1,4 @@
 # My Dotfiles
 ---
 
-[desktop](ob.png)
+![desktop](ob.png)
