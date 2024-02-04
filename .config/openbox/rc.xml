@@ -250,6 +250,11 @@
   <keybind key="S-A-f">
 		  <action name="ToggleMaximize"/>
   </keybind> 
+  <keybind key="W-1">
+    <action name="MoveResizeTo">
+      <monitor>2</monitor>
+    </action>
+  </keybind>
   <!-- <keybind key="S-A-h"> -->
   <!--   <action name="Execute"> -->
   <!--     <command>xterm -e obhelp</command> -->
