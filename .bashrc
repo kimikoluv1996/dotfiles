@@ -18,6 +18,7 @@ alias rebash='source ~/.bashrc'
 alias bashedit='nvim ~/.bashrc'
 
 export PATH=/home/joey/.nimble/bin:$PATH
+export PATH=/home/joey/scripts:$PATH
 export XDG_CONFIG_DIRS=/home/joey/.config/rofi:$PATH
 
 export PATH=/home/joey/venv/bin:$PATH
