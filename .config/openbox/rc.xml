@@ -252,7 +252,7 @@
   </keybind> 
   <keybind key="S-A-h">
     <action name="Execute">
-      <command>alacritty -e obhelp</command>
+      <command>alacritty -e obhelp &amp;</command>
     </action>
   </keybind>
 
