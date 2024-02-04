@@ -250,11 +250,11 @@
   <keybind key="S-A-f">
 		  <action name="ToggleMaximize"/>
   </keybind> 
-  <keybind key="S-A-h">
-    <action name="Execute">
-      <command>alacritty -e obhelp &amp;</command>
-    </action>
-  </keybind>
+  <!-- <keybind key="S-A-h"> -->
+  <!--   <action name="Execute"> -->
+  <!--     <command>xterm -e obhelp</command> -->
+  <!--   </action> -->
+  <!-- </keybind> -->
 
   <!-- Keybindings for window switching -->
   <keybind key="A-Tab">
