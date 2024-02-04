@@ -252,6 +252,8 @@
   </keybind> 
   <keybind key="W-1">
     <action name="MoveResizeTo">
+      <y>center</y>
+      <x>center</x>
       <monitor>2</monitor>
     </action>
   </keybind>
