@@ -10,4 +10,5 @@ picom &
 # set dock
 tint2 &
 
-
+#start emacs daemon
+emacs --daemon &

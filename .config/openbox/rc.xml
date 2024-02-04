@@ -317,6 +317,16 @@
      <action name="Execute">
 		<command>alacritty</command>
 	 </action>
+	 </keybind>
+	 <keybind key="W-S-f">
+     <action name="Execute">
+		<command>firefox</command>
+	 </action>
+  </keybind>
+  <keybind key="W-A-Return">
+    <action name="Execute">
+      <command>emacsclient --create-frame</command>
+    </action>
   </keybind>
 </keyboard>
 
