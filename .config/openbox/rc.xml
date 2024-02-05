@@ -340,6 +340,11 @@
       <command>emacsclient --create-frame</command>
     </action>
   </keybind>
+  <keybind key="S-A-p">
+    <action name="Execute">
+      <command>keepassxc</command>
+    </action>
+  </keybind>
 </keyboard>
 
 <mouse>
