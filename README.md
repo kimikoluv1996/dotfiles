@@ -16,6 +16,7 @@ a suggestion tho...
 
 ### What software do I use???
 - *Text Editor-* Emacs
+  I'm a major Emacs fangirl 
 - *Terminal Emulator-* Alacritty
 - *Linux Distro-* Arch
 - *Window Manager-* Openbox
