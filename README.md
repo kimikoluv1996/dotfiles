@@ -15,8 +15,7 @@ It's licenced under the GPL so this is more of just
 a suggestion tho...
 
 ### What software do I use???
-- *Text Editor-* Emacs
-  I'm a major Emacs fangirl 
+- *Text Editor-* Emacs -- _I'm a major Emacs fangirl_
 - *Terminal Emulator-* Alacritty
 - *Linux Distro-* Arch
 - *Window Manager-* Openbox
