@@ -1,0 +1,127 @@
+* My Org Config
+** ABOUT
+ I'm not sure if I need to do this since I don't put that many comments
+ in my configs but eh.
+ a lot of this so far is copied and pasted verbatim from DT's config
+ 
+** Set up Package.el to work with MELPA
+#+begin_src emacs-lisp
+  (require 'package)
+  (add-to-list 'package-archives
+	     '("melpa" . "https://melpa.org/packages/"))
+  (package-refresh-contents)
+  (package-initialize)
+#+end_src
+
+** Use-Package
+install use-package
+
+#+begin_src emacs-lisp
+(unless (package-installed-p 'use-package)
+   (package-install 'use-package))
+;;(setq use-package-always-ensure t) doesn't work
+#+end_src
+
+** Evil Mode
+install evil mode and configure i guess
+
+#+begin_src emacs-lisp
+  (use-package evil
+    :init   ;; tweak evil's configuration before loading it
+    (setq evil-want-integration t)
+    (setq evil-want-keybinding nil)
+    (setq evil-vsplit-window-right t)
+    (setq evil-split-window-below t)
+    (evil-mode))
+  (use-package evil-collection
+    :after evil
+    :config
+    (setq evil-collection-mode-list '(dashboard dired ibuffer))
+    (evil-collection-init))
+  ;;(use-package evil-tutor) doesn't work
+#+end_src
+
+** General.el
+sets keybinds for moi
+#+begin_src emacs-lisp
+  (use-package general
+      :ensure t
+      :config
+      (general-evil-setup t))
+#+end_src 
+
+* PERFORMANCE
+** Garbage Collection
+make startup faster by reducing frequency of garbage collection
+
+#+begin_src emacs-lisp
+  (use-package gcmh
+    :ensure t
+    :config
+    (gcmh-mode 1))
+
+  (setq gc-cons-threshold 402653184
+	 gc-cons-percentage 0.6)
+
+  (add-hook 'emacs-startup-hook
+	   (lambda ()
+		(message "*** Emacs loaded in %s with %d garbage collections."
+		   (format "%.2f seconds"
+			     (float-time
+			       (time-subtract after-init-time before-init-time)))
+		    gcs-done)))
+  ;; silence compiler warnings
+  (setq comp-async-report-warnings-errors nil)
+#+end_src 
+whew that was a lot of typing
+
+* ELFEED
+now for something useful for me
+
+#+begin_src emacs-lisp
+;;    (use-package elfeed
+ ;; :ensure t
+  ;;:config
+  ;;(setq elfeed-search-feed-face ":foreground #fff :weight bold"
+	;;elfeed-feeds (quote
+         ;;              (("https://www.reddit.com/r/linux.rss" reddit linux)))))
+#+end_src
+
+* GUI STUFF
+remove stuff for babbies like scroll bars
+
+#+begin_src emacs-lisp
+  (menu-bar-mode -1)
+  (tool-bar-mode -1)
+  (scroll-bar-mode -1)
+
+  (global-display-line-numbers-mode 1)
+  (global-visual-line-mode t)
+#+end_src
+
+* THEMES
+install doom themes
+
+#+begin_src emacs-lisp
+   (use-package doom-themes :ensure t)
+   (setq doom-themes-enable-bold t)
+   (setq doom-themes-enable-italic t)
+   (load-theme 'doom-one t)
+#+end_src
+
+#+begin_src emacs-lisp
+  (use-package smart-mode-line :ensure t)
+  (sml/setup)
+#+end_src
+
+
+* EMMS
+
+ooh the big killer feature!
+
+#+begin_src emacs-lisp
+  (use-package emms :ensure t)
+  (require 'emms-setup)
+  (emms-all)
+  (emms-default-players)
+  #+end_src
