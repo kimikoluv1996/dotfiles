@@ -22,34 +22,6 @@ install use-package
 ;;(setq use-package-always-ensure t) doesn't work
 #+end_src
 
-** Evil Mode
-install evil mode and configure i guess
-
-#+begin_src emacs-lisp
-  (use-package evil
-    :init   ;; tweak evil's configuration before loading it
-    (setq evil-want-integration t)
-    (setq evil-want-keybinding nil)
-    (setq evil-vsplit-window-right t)
-    (setq evil-split-window-below t)
-    (evil-mode))
-  (use-package evil-collection
-    :after evil
-    :config
-    (setq evil-collection-mode-list '(dashboard dired ibuffer))
-    (evil-collection-init))
-  ;;(use-package evil-tutor) doesn't work
-#+end_src
-
-** General.el
-sets keybinds for moi
-#+begin_src emacs-lisp
-  (use-package general
-      :ensure t
-      :config
-      (general-evil-setup t))
-#+end_src 
-
 * PERFORMANCE
 ** Garbage Collection
 make startup faster by reducing frequency of garbage collection
