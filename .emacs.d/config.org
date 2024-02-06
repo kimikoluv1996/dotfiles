@@ -51,7 +51,7 @@ whew that was a lot of typing
 now for something useful for me
 
 #+begin_src emacs-lisp
-;;    (use-package elfeed
+  ;;    (use-package elfeed
  ;; :ensure t
   ;;:config
   ;;(setq elfeed-search-feed-face ":foreground #fff :weight bold"

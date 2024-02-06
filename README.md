@@ -23,3 +23,4 @@ a suggestion tho...
 ### What are my plans for the future of this config?
 - I wanna add some bootstrap scripts for when I want to reinstall Arch.
 - Purge my setup of all proprietary and non-free dependencies, if they exist.
+- add some firefox custom css when I set that up.

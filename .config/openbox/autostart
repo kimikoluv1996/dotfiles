@@ -1,8 +1,8 @@
 # swap monitors
-xrandr --output HDMI-0 --left-of LVDS #should go before everything
+xrandr --output HDMI-0 --primary --left-of LVDS #should go before everything
 
 # set wallpaper
-feh --bg-fill ~/storage/media/pictures/mikuwall.jpg
+feh --bg-fill ~/dotfiles/wallpapers/wallgir.png
 
 # run compositor
 picom &
