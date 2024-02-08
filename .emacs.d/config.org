@@ -47,6 +47,13 @@ make startup faster by reducing frequency of garbage collection
 #+end_src 
 whew that was a lot of typing
 
+* Change Font
+since i hate the default font
+#+begin_src emacs-lisp
+  (add-to-list 'default-frame-alist '(font . "Jetbrains Mono"))
+  (set-face-attribute 'default t :font "Jetbrains Mono")
+#+end_src
+
 * ELFEED
 now for something useful for me
 
