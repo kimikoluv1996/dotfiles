@@ -104,3 +104,8 @@ ooh the big killer feature!
   (emms-all)
   (emms-default-players)
   #+end_src
+
+* Configure Auto-Complete Plugin
+#+begin_src emacs-lisp
+(ac-config-default)
+#+end_src
