@@ -1,0 +1,19 @@
+#!/usr/bin/bash
+
+source .jokefuncs
+
+mkcd() {
+   mkdir -p "$@" && cd "$@"
+}
+
+shtdwn() {
+	echo "really shut down?"
+	read c
+	if [ $c == "yes" ]; then
+		shutdown now
+	else
+		echo "aborting..."
+	fi
+}
+
+
