@@ -2,9 +2,9 @@
 
 ### What software do I use???
 - *Text Editor-* VS Code usually, but sometimes vim when I want to feel like a l33t hax0r
-- *Terminal Emulator-* Kitty
-- *Linux Distro-* Fedora
-- *Window Manager-* Undecided
+- *Terminal Emulator-* Alacritty
+- *Linux Distro-* Arch Linux
+- *Window Manager-* Herbstluftwm
 
 ### What are my plans for the future of this config?
 - I wanna add some bootstrap scripts for when I want to reinstall Arch.
