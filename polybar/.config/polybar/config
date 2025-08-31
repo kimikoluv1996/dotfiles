@@ -25,6 +25,7 @@ font-1 = Noto Sans Symbols2:size=10;2
 
 modules-left = herbstluftwm
 modules-right = cpu memory filesystem temperature pulseaudio date
+modules-center = text
 
 tray-position = right
 
@@ -92,7 +93,11 @@ format-muted-foreground = ${colors.secondary}
 type = internal/date
 interval = 1
 date = %Y-%m-%d
-time = %H:%M:%S
+time = %I:%M:%S
 format-prefix = "Date "
 format-prefix-foreground = ${colors.primary}
 label = %date% %time%
+
+[module/text]
+type = custom/text
+label = ${env:HOSTNAME}

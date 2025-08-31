@@ -1,6 +1,5 @@
 #!/usr/bin/bash
 
-source .jokefuncs
 
 mkcd() {
    mkdir -p "$@" && cd "$@"

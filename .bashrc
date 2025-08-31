@@ -10,6 +10,9 @@ MY_WM_CFG="$DOTFILES/herbstluftwm/autostart"
 GAMES="${HOME}/Games"
 ROMS="$GAMES/roms"
 
+#git username and email
+USERNAME="kimikoluv1996"
+EMAIL="$USERNAME@proton.me"
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -37,6 +40,11 @@ alias ffx='firefox 2> /dev/null &'
 
 alias wed="vim $MY_WM_CFG"
 
+alias gs="git status"
+alias ga='git add --all'
+alias gc='git commit -m'
+alias gp='git push'
+
 alias emu='mednafen'
 sonic(){
     case "$@" in
@@ -54,4 +62,9 @@ sonic(){
 		echo "select 1, 2, or 3"
 		;;
     esac
+}
+
+gcfg(){
+   git config user.name "$USERNAME"
+   git config user.email "$EMAIL"
 }

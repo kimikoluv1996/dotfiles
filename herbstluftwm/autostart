@@ -23,7 +23,7 @@ hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-c close
 hc keybind $Mod-Shift-w spawn firefox
 hc keybind $Mod-Control-r spawn rofi -show run
-hc keybind $Mod-Return spawn kitty #"${TERMINAL:-xterm}" # use your $TERMINAL with xterm as fallback
+hc keybind $Mod-Return spawn alacritty #"${TERMINAL:-xterm}" # use your $TERMINAL with xterm as fallback
 
 # basic movement in tiling and floating mode
 # focusing clients
@@ -192,3 +192,10 @@ for monitor in $(hc list_monitors | cut -d: -f1) ; do
     # start it on each monitor
     "$panel" "$monitor" &
 done
+
+# autostart polybar & picom
+export HOSTNAME=$HOSTNAME # host name for polybar display
+/home/joey/.config/polybar/launch.sh &
+picom &
+
+feh --bg-fill /home/joey/Documents/repos/dotfiles/wallpapers/mikuwall.jpg
