@@ -193,9 +193,10 @@ for monitor in $(hc list_monitors | cut -d: -f1) ; do
     "$panel" "$monitor" &
 done
 
-# autostart polybar & picom
+# autostart
 export HOSTNAME=$HOSTNAME # host name for polybar display
 /home/joey/.config/polybar/launch.sh &
 picom &
 
 feh --bg-fill /home/joey/Documents/repos/dotfiles/wallpapers/mikuwall.jpg
+/usr/bin/dunst

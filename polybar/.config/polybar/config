@@ -23,7 +23,7 @@ module-margin = 1
 font-0 = Iosevka:size=10;2
 font-1 = Noto Sans Symbols2:size=10;2
 
-modules-left = herbstluftwm
+modules-left = herbstluftwm ewmh
 modules-right = cpu memory filesystem temperature pulseaudio date
 modules-center = text
 
@@ -101,3 +101,15 @@ label = %date% %time%
 [module/text]
 type = custom/text
 label = ${env:HOSTNAME}
+
+[module/ewmh]
+type = internal/xworkspaces
+
+label-active-foreground = #3eed0e
+label-active-background = #314dd8
+
+label-occupied-background = #000000
+
+label-occupied-padding = 5
+label-active-padding = 5
+label-empty-padding = 5
