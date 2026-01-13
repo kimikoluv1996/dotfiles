@@ -198,5 +198,5 @@ export HOSTNAME=$HOSTNAME # host name for polybar display
 /home/joey/.config/polybar/launch.sh &
 picom &
 
-feh --bg-fill /home/joey/Documents/repos/dotfiles/wallpapers/mikuwall.jpg
+feh --bg-fill /home/joey/Repos/dotfiles/wallpapers/mikuwall.jpg
 /usr/bin/dunst

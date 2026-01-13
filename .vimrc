@@ -1,24 +1,8 @@
-" Joey's VIm CONFIG!!! :3
+" Joey's vim config
 
 "" Plugin Management
-"stuff required for vundle to work
 set nocompatible
 syntax enable
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'vimwiki/vimwiki'
-
-Plugin 'davidhalter/jedi-vim'
-
-Plugin 'preservim/nerdtree'
-
-call vundle#end()
-filetype plugin on
-
 
 " other stuff
 
