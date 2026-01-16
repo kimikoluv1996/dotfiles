@@ -7,14 +7,13 @@ source /home/joey/MACS
 
 DOTFILES="/home/joey/Repos/dotfiles"
 DOWNLOADS="/home/joey/Downloads"
-MY_WM_CFG="~/.config/i3/config"
-MY_HL_CFG="$DOTFILES/.config/herbstluftwm/autostart"
+MY_WM_CFG="$HOME/.config/herbstluftwm/autostart"
 GAMES="${HOME}/Games"
 ROMS="$GAMES/Roms"
 PROJ="/home/joey/Code/projects"
 
 export EDITOR=vim
-export TERMINAL=alacritty
+export TERMINAL=st
 
 #git username and email
 USERNAME="kimikoluv1996"
@@ -25,8 +24,8 @@ export PATH=$PATH:/home/joey/.local/bin
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias bedit="vim $DOTFILES/.bashrc"
-alias rebash='source /home/joey/.bashrc'
+alias bedit="vim $HOME/.bashrc"
+alias rebash="source $HOME/.bashrc"
 alias fedit="vim $HOME/.myfuncs"
 
 alias ls='ls --color=auto'

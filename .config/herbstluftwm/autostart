@@ -23,7 +23,8 @@ hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-c close
 hc keybind $Mod-Shift-w spawn firefox
 hc keybind $Mod-Control-r spawn rofi -show run
-hc keybind $Mod-Return spawn alacritty #"${TERMINAL:-xterm}" # use your $TERMINAL with xterm as fallback
+#hc keybind $Mod-Return spawn st -f "Cascadia Code" 
+hc keybind $Mod-Return spawn "${TERMINAL:-xterm}" # use your $TERMINAL with xterm as fallback --> orig
 
 # basic movement in tiling and floating mode
 # focusing clients
@@ -199,4 +200,6 @@ export HOSTNAME=$HOSTNAME # host name for polybar display
 picom &
 
 feh --bg-fill /home/joey/Repos/dotfiles/wallpapers/mikuwall.jpg
-/usr/bin/dunst
+/usr/bin/dunst &
+kdeconnectd &
+unclutter &
